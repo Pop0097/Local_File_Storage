@@ -1,0 +1,37 @@
+.file-overview-container {
+  border: 1px solid #b0b0b0;
+  margin: 5px 50px;
+  padding: 5px 20px;
+  display: flex;
+  flex-direction: row;
+
+  .file-info {
+    text-align: left;
+
+    .file-name {
+      font-weight: 600;
+    }
+  }
+
+  .file-actions {
+    text-align: right;
+    margin-left: auto;
+  }
+
+  @media (max-width: 800px) {
+    .file-info {
+      text-align: center;
+    }
+
+    .file-actions {
+      text-align: center;
+      margin-left: 0px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .file-overview-container {
+    flex-direction: column;
+  }
+}
