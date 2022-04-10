@@ -19,7 +19,7 @@ export const FileInput = (props: FileInputProps) => {
         const data = new FormData();
         data.append('file', attachedFile);
 
-        const response = await fetch('/api/upload', {
+        const response = await fetch('/api/upload/file', {
             method: 'POST',
             body: data,
         });

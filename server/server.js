@@ -9,7 +9,7 @@ const path = require("path");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.json());
 app.use(cors());
 
 const port = 4000;
@@ -34,7 +34,7 @@ const upload = multer({ storage: storage, dest: fileDirectory + "/"}).single("fi
 /**
  * Stores files locally in the `public` directory
  */
-app.post("/api/upload", upload, (req, res) => {
+app.post("/api/upload/file", upload, (req, res) => {
     upload(req, res, (err) => {
         if (err instanceof multer.MulterError) {
             return res.status(500).json(err);

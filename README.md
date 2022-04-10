@@ -13,6 +13,7 @@ This repo uses nginx to run a web-server on a Raspberry Pi. The app served allow
 1. On your Raspberry Pi, install `nginx` using `sudo apt-get install nginx` 
 2. Install `node` on your Raspberry Pi
 3. Clone the repo. Find the config file for `nginx` (usually stored at `~/../../etc/nginx/sites-available`) and replace the contents with the text in `Local_File_Storage/nginx-config/config.txt`.
+	1. Replace the "PATH_TO_BUILD" with the path to your `Local_File_Storage/client/build`
 4. For the `server` and `client` folders in `Local_File_Storage`, run `npm install`.
 5. In `Local_File_Storage/server`, run `node server.js`
 6. In a new terminal window, go to `Local_File_Storage/client` and run `npm run build`
